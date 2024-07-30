@@ -1,0 +1,58 @@
+﻿@using BookingSystemDLS.DataModel.Master.Room
+@model IEnumerable<GridRoomVM>
+
+@{
+    ViewData["Title"] = "Room";
+}
+
+
+
+<div>
+    <a class="btn btn-primary" href="@Url.Action("Add", "Room")">
+        Add New
+    </a>
+
+    <table>
+        <thead>
+            <tr>
+                <td class="col-2 text-center fw-bold">Action</td>
+                <td class="col-2 text-center fw-bold">Room Name</td>
+                <td class="col-1 text-center fw-bold">Floor</td>
+                <td class="col-2 text-center fw-bold">Description</td>
+                <td class="col-2 text-center fw-bold">Location Office</td>
+                <td class="col-1 text-center fw-bold">Capacity</td>
+                <td class="col-2 text-center fw-bold">Room Color</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">
+                        @* Generate URL with query string *@
+                        <a class="btn btn-success" href="@Url.Action("Edit", "Room", new {id=item.Id})">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                        <form asp-action="Delete" asp-asp-controller="RoomWeb" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@item.Id" />
+
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fa fa-trash-o"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td>@item.Name</td>
+                    <td>@item.Floor</td>
+                    <td>@item.Description</td> 
+                    <td>@item.LocationName</td>
+                    <td>@item.Capacity</td>
+                    <td class="color-column"> <div style="background-color:@item.Color" class="color-preview"></div> @item.Color </td>
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    
+</div>
+

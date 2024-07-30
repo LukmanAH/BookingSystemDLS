@@ -1,0 +1,51 @@
+﻿@using BookingSystemDLS.DataModel.Master.Resource
+@model IEnumerable<GridResourceVM>
+
+@{
+    ViewData["Title"] = "Resource";
+}
+
+
+ 
+<div>
+    <a class="btn btn-primary" href="@Url.Action("Add", "Resource")">
+        Add New
+    </a>
+
+    <table>
+        <thead>
+            <tr>
+                <td class="col-1 text-center fw-bold">Action</td>
+                <td class="col-2 text-center fw-bold">Resource Name</td>
+                <td class="col-1 text-center fw-bold">Status</td>
+                <td class="col-2 text-center fw-bold">Icon</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model){
+            <tr>
+                 <td class="text-center">
+                    @* Generate URL with query string *@
+                    <a class="btn btn-success" href="@Url.Action("Edit", "Resource", new {id=item.Id})">
+                        <i class="fa fa-pencil"></i>
+                    </a>
+                    <form asp-action="Delete" asp-asp-controller="BookingCodeWeb" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@item.Id" />
+
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fa fa-trash-o"></i>
+                        </button>
+                    </form>
+                </td>
+                <td>@item.Name</td>
+                    <td class="text-center"><input readonly type="checkbox" class="form-check-input" @(item.IsActive ? "checked" : "")></td>
+                    <td><img class="resource-icon" src="~/img/ResourceIcon/@item.IconPath" alt="Resource Icon"></td>
+               
+            </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+

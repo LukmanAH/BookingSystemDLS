@@ -1,0 +1,68 @@
+﻿@using BookingSystemDLS.WEB.Models.Room
+@model UpsertRoomWebVM
+
+@{
+    ViewData["Title"] = "Room / Room Form";
+}
+
+
+ 
+<div>
+     <form method="post" asp-action="Upsert" asp-asp-controller="BookingCodeWeb">
+        <div class="mb-3">
+            <input type="hidden" name="Id" value="@Model.Room.Id"> 
+
+            <div class="row mb-2">
+                <label for="name" class="col-sm-3 form-label">Room Name</label>
+                <input type="text" name="name" class="col form-control" id="name" placeholder="Enter name" value="@Model.Room.Name">
+            </div>
+
+            <div class="row mb-3">
+                <label for="floor" class="col-sm-3 form-label">Floor</label>
+                <select asp-for="@Model.Room.Floor" name="floor" class="col form-select">
+                    @for(int i = 1; i<30; i++){
+                        <option value="@i">@i</option>
+                    }
+                </select>
+            </div>
+            <div class="row mb-3">
+                <label for="description" class="col-sm-3 form-label">Description</label>
+                <input type="text" name="description" class="col form-control" id="description" placeholder="Enter description" value="@Model.Room.Description">
+            </div>
+            <div class=" row mb-3">
+                <label for="location" class="col-sm-3 form-label">Location</label>
+                <select asp-for="@Model.Room.LocationId" name="locationId" asp-items="@Model.LocationLoV" class="col form-select">
+                    <option value="">-- Select Location --</option>
+                </select>
+            </div>
+            <div class="row mb-3">
+                <label for="capacity" class=" col-sm-3 form-label">Maximum Capacity Of Room</label>
+                <select asp-for="@Model.Room.Capacity" name="capacity" class="col form-select">
+                    @for (int i = 1; i < 30; i++)
+                    {
+                        <option value="@i">@i</option>
+                    }
+                </select>
+            </div>
+            <div class="row mb-3">
+                <label for="color" class="col-sm-3 form-label">Color Room</label>
+                <div class="col"> 
+                    <input type="color" name="color" class="form-control form-control-color" id="color" placeholder="Enter color" value="@Model.Room.Color">
+                </div> 
+                
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3"></label>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Simpan</button> <a class="btn btn-danger" href="@Url.Action("Index", "Room")">Batal</a>
+                </div>
+            </div>
+        </div>
+        </form> 
+</div>
+
+<script>
+
+</script>
+

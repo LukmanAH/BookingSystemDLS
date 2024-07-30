@@ -1,0 +1,9 @@
+C:\Users\1803\Documents\DOTNET\BookingSystem\BookingSystemDLS.WEBNew\obj\Debug\net8.0\BookingSystemDLS.WEBNew.csproj.AssemblyReference.cache
+C:\Users\1803\Documents\DOTNET\BookingSystem\BookingSystemDLS.WEBNew\obj\Debug\net8.0\BookingSystemDLS.WEBNew.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1803\Documents\DOTNET\BookingSystem\BookingSystemDLS.WEBNew\obj\Debug\net8.0\BookingSystemDLS.WEBNew.AssemblyInfoInputs.cache
+C:\Users\1803\Documents\DOTNET\BookingSystem\BookingSystemDLS.WEBNew\obj\Debug\net8.0\BookingSystemDLS.WEBNew.AssemblyInfo.cs
+C:\Users\1803\Documents\DOTNET\BookingSystem\BookingSystemDLS.WEBNew\obj\Debug\net8.0\BookingSystemDLS.WEBNew.csproj.CoreCompileInputs.cache
+C:\Users\1803\Documents\DOTNET\BookingSystem\BookingSystemDLS.WEBNew\obj\Debug\net8.0\BookingSystemDLS.WEBNew.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\1803\Documents\DOTNET\BookingSystem\BookingSystemDLS.WEBNew\obj\Debug\net8.0\BookingSystemDLS.WEBNew.RazorAssemblyInfo.cache
+C:\Users\1803\Documents\DOTNET\BookingSystem\BookingSystemDLS.WEBNew\obj\Debug\net8.0\BookingSystemDLS.WEBNew.RazorAssemblyInfo.cs
+C:\Users\1803\Documents\DOTNET\BookingSystem\BookingSystemDLS.WEBNew\obj\Debug\net8.0\BookingSystemDLS.WEBNew.sourcelink.json

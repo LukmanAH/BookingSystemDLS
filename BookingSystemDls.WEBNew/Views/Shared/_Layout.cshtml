@@ -1,0 +1,103 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BookingSystemDLS.WEBNew</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/font-awesome-4.7.0\css\font-awesome.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BookingSystemDLS.WEBNew.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM4xlX/4nt3LQzef0RlgCLIKmTSA41B0G0F7PMA" crossorigin="anonymous">
+</head> 
+<body>
+    <div class="sidebar">
+        <div class="company-logo">  
+            <img src="~/img/kino.svg" alt="Company Logo"> 
+        </div>
+        <ul>
+            <li class="parent-menu"><a href="#">SETTING</a></li>
+            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+            <li><a href="@Url.Action("Index", "Menu")">Menu</a></li>
+            <li><a href="@Url.Action("Index", "GlobalSetup")">Global Setup</a></li>
+            <li class="parent-menu"><a href="#">MASTER DATA</a></li> 
+            <li><a href="@Url.Action("Index", "BookingCode")">Booking Code</a></li>
+            <li><a href="@Url.Action("Index", "Resource")">Resource</a></li>
+            <li><a href="@Url.Action("Index", "Location")">Location</a></li>
+            <li><a href="@Url.Action("Index", "Room")">Room</a></li>
+            <li class="parent-menu"><a href="#">TRANSACTION</a></li>
+           @*  @foreach (var menu in Model)
+            {
+                @if (menu.IsRoot)
+                {
+                    <li><a href="@menu.NavigationTo" class="parent-menu">@menu.Title</a></li>
+                }
+                else
+                {
+                    <li><a href="@menu.NavigationTo">@menu.Title</a></li>
+                }
+                
+            } *@
+        </ul>
+    </div>
+    <div class="main-content"> 
+        <header> 
+            <div class="col-sm-8">
+                   
+            </div>  
+
+            <div class="col-sm-2 role d-flex flex-column align-items-end">
+                <p>Welcome,</p> 
+                <p>Administrator as Admin</p>
+            </div>   
+                 
+            <div class="col-sm-1 text-center date">
+                <i class="fa fa-calendar"></i> 
+                <p>Tgl Nh</p> 
+            </div>
+
+            <div class="col-sm-1 text-center logout">
+                <i class="fa fa-sign-out"></i>
+                <p>Logout</p> 
+            </div>
+        </header>
+        <div class="breadcrumbs"> 
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+<script>
+        const today = new Date();
+
+        // Mendapatkan indeks hari (0-6) dengan 0 = Minggu, 1 = Senin, ..., 6 = Sabtu
+        const dayIndex = today.getDay();
+
+        // Mendapatkan tanggal, bulan, dan tahun
+        const day = today.getDate();
+        const month = today.getMonth(); // Bulan dimulai dari 0
+        const year = today.getFullYear();
+
+        // Array nama hari dan bulan dalam bahasa Indonesia
+        const dayNames = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"];
+
+        // Mendapatkan nama hari dan bulan berdasarkan indeks
+        const dayName = dayNames[dayIndex];
+        const monthName = monthNames[month];
+
+        // Memformat tanggal (contoh: Kamis, 25 Jul 2023)
+        const formattedDate = `${dayName}, ${day.toString().padStart(2, '0')} ${monthName} ${year}`;
+
+        // Menampilkan tanggal sekarang dalam elemen dengan id 'currentDate'
+        document.querySelector('header .date p').textContent = formattedDate;
+</script>
+</body>
+</html>

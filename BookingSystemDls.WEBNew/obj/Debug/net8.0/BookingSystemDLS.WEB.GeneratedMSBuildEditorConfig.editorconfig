@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BookingSystemDLS.WEB
+build_property.RootNamespace = BookingSystemDLS.WEB
+build_property.ProjectDir = C:\Users\1803\Documents\DOTNET\BookingSystemDLS\BookingSystemDLS.WEBNew\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\1803\Documents\DOTNET\BookingSystemDLS\BookingSystemDLS.WEBNew
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/BookingCodeWeb/BookingCode-Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ0NvZGVXZWJcQm9va2luZ0NvZGUtSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/BookingCodeWeb/BookingCode-Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ0NvZGVXZWJcQm9va2luZ0NvZGUtVXBzZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/GlobalSetupWeb/GlobalSetup-Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2xvYmFsU2V0dXBXZWJcR2xvYmFsU2V0dXAtSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/GlobalSetupWeb/GlobalSetup-Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2xvYmFsU2V0dXBXZWJcR2xvYmFsU2V0dXAtVXBzZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/LocationWeb/Location-Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25XZWJcTG9jYXRpb24tSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/LocationWeb/Location-Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25XZWJcTG9jYXRpb24tVXBzZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/MenuWeb/Menu-Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVdlYlxNZW51LUluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/ResourceWeb/Resource-Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzb3VyY2VXZWJcUmVzb3VyY2UtSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/ResourceWeb/resource-Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzb3VyY2VXZWJccmVzb3VyY2UtVXBzZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/RoomWeb/Room-Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVdlYlxSb29tLUluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/RoomWeb/Room-Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVdlYlxSb29tLVVwc2VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1803/Documents/DOTNET/BookingSystemDLS/BookingSystemDLS.WEBNew/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-lq9ih5w91h

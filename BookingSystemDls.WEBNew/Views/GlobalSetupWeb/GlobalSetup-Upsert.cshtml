@@ -1,0 +1,50 @@
+﻿@using BookingSystemDLS.DataModel.Master.GlobalSetup
+@model GridGlobalSetupVM
+
+@{
+    ViewData["Title"] = "Global Setup / Global Setup Form";
+}
+
+
+
+<div>
+    <form method="post" asp-action="Upsert" asp-asp-controller="GlobalSetupWeb">
+        <div class="mb-3">
+
+            <div class="row mb-3">
+                <label for="code" class="col-sm-3 form-label">Parameter Code</label>
+                <input type="text" name="code" class="col form-control" id="code" placeholder="Enter code" value="@Model.Code" readonly>
+            </div>
+
+            <div class="row mb-3">
+                <label for="name" class="col-sm-3 form-label">Parameter Name</label>
+                <input type="text" name="name" class="col form-control" id="name" placeholder="Enter name" value="@Model.Name">
+            </div>
+
+            <div class="row mb-3">
+                <label for="desc" class="col-sm-3 form-label">Parameter Desc</label>
+                <textarea type="text" name="desc" class="col form-control" id="desc" placeholder="Enter desc">@Model.Desc</textarea>
+            </div>
+
+            <div class="row mb-3">
+                <label for="value" class="col-sm-3 form-label">Parameter Value</label>
+                <input type="text" name="value" class="col form-control" id="value" placeholder="Enter value" value="@Model.Value">
+            </div>
+
+
+
+            <div class="row mb-3">
+                <label class="col-sm-3"></label>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Simpan</button> <a class="btn btn-danger" href="@Url.Action("Index", "GlobalSetup")">Batal</a>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<script>
+</script>
+

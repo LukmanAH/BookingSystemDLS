@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\BookingSystemDLS.WEB.props" />
+</Project>

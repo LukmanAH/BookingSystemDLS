@@ -1,0 +1,36 @@
+﻿@using BookingSystemDLS.DataModel.Master.Location
+@model GridLocationVM
+
+@{
+    ViewData["Title"] = "Location / Location Form";
+}
+
+
+ 
+<div>
+     <form method="post" asp-action="Upsert" asp-asp-controller="LocationWeb">
+        <div class="mb-3">
+            <input type="hidden" name="Id" value="@Model.Id">
+
+            <div class="row mb-3">
+                <label for="bookingCode" class="col-sm-3 form-label">Location Name</label>
+                <input type="text" name="name" class="col form-control" id="name" placeholder="Enter name" value="@Model.Name">
+            </div>
+
+
+            <div class="row mb-3">
+                <label class="col-sm-3"></label>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Simpan</button> <a class="btn btn-danger" href="@Url.Action("Index", "Location")">Batal</a>
+                </div>
+
+            </div>
+             
+        </div>
+         </form> 
+</div>
+
+<script>
+   
+</script>
+

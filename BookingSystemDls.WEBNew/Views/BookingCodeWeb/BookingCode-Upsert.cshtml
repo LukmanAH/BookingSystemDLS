@@ -1,0 +1,56 @@
+﻿@using BookingSystemDLS.DataModel.Master.BookingCode
+@model GridBCVM
+
+@{
+    ViewData["Title"] = "Booking Code / Booking Code Form";
+}
+
+
+ 
+<div>
+     <form method="post" asp-action="Upsert" asp-asp-controller="BookingCodeWeb">
+        <div class="mb-3">
+            <input type="hidden" name="Id" value="@Model.Id">
+            <input type="hidden" id="hidenIsActive" name="IsActive" value="@Model.IsActive">
+
+            <div class="row mb-3">
+                <label for="bookingCode" class="col-sm-3 form-label">Booking Code</label>
+                <input type="text" name="BookingCode" class="col form-control" id="bookingCode" placeholder="Enter booking code" value="@Model.BookingCode">
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 form-label" for="isActive">Active</label>
+                <div class="col">
+                    <input type="checkbox" class="form-input" id="isActive" name="IsActive" @(Model.IsActive ? "checked" : "")>
+                </div>
+                
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3"></label>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Simpan</button> <a class="btn btn-danger" href="@Url.Action("Index", "BookingCode")">Batal</a>
+                </div>
+
+            </div>
+
+        </div>
+         </form> 
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var checkbox = document.getElementById('isActive');
+        var hiddenInput = document.getElementById('hidenIsActive');
+
+        hiddenInput.value = checkbox.checked ? true : false;
+
+        if (checkbox && hiddenInput){
+                checkbox.addEventListener('change', function () {
+                    hiddenInput.value = checkbox.checked ? true : false;
+            });
+        }
+       
+    });
+</script>
+

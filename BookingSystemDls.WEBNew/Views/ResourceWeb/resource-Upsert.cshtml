@@ -1,0 +1,137 @@
+﻿@using BookingSystemDLS.DataModel.Master.Resource
+@model ResourceWithDetailVM
+
+@{
+    ViewData["Title"] = "Resource / Resource Form";
+}
+
+
+ 
+<div>
+     <form method="post" asp-action="Upsert" asp-asp-controller="BookingCodeWeb">
+        <div class="mb-3">
+            <input type="hidden" name="Id" value="@Model.Id">
+            <input type="hidden" id="hidenIsActive" name="IsActive" value="@Model.IsActive">
+
+            <div class="row mb-3">
+                <label for="Name" class="col-sm-3  form-label">Resource Name</label>
+                <div class="col-sm-9">
+                    <input type="text" name="Name" class="form-control" id="Name" placeholder="Enter resource name" value="@Model.Name">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="bookingCode" class="col-sm-3 form-label">Resource Code</label>
+
+                <div class="col-sm-9">
+                    <a id="openModalBtn" class="btn btn-secondary btn-sm">Add New Code</a>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="text-center">Is Active</td>
+                                <td class="text-center">Resource Code</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model.details)
+                            {
+                                <tr>
+                                    <td class="text-center">@item.IsActive</td>
+                                    <td>@item.Code</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+               
+            </div>
+
+            <div class="row mb-3">
+                <label for="IconFile" class="col-sm-3 form-label">Resource Icon</label>
+                <div class="col-sm-9">
+                    <div>
+                        <img id="imagePreview" src="#" alt="Pratinjau Gambar" style="max-width: 200px; display: none;" />
+                    </div>
+                    <div>
+                        <input type="file" name="IconFile" value="@Model.IconFile" accept="image/*" onchange="previewImage(event)" />
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="row mb-3">
+                <label class="col-sm-3 form-label" for="isActive">Active</label>
+                <div class="col-sm-9">
+                    <input type="checkbox" class="form-check-input" id="isActive" name="IsActive" @(Model.IsActive ? "checked" : "")>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3"></label>
+                <div class="col-sm-9">
+                    <button type="submit" class="btn btn-primary">Simpan</button> <a class="btn btn-danger" href="@Url.Action("Index", "Resource")">Batal</a>
+                </div>
+             </div>
+        </div>
+        
+    </form> 
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Add New Code</h2>
+            <form method="post" asp-action="Upsert" asp-asp-controller="BookingCodeWeb">
+                <div class="mb-3">
+                    <label for="code" class="form-label">Resource Code</label>
+                    <input type="text" name="code" class="form-control" id="code" placeholder="Enter resource code" value="">
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary">Simpan</button> <a class="btn btn-danger close-btn">Batal</a>
+                </div>
+            </form>
+
+            
+        </div>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var checkbox = document.getElementById('isActive');
+        var hiddenInput = document.getElementById('hidenIsActive');
+
+        hiddenInput.value = checkbox.checked ? true : false;
+
+        if (checkbox && hiddenInput){
+                checkbox.addEventListener('change', function () {
+                    hiddenInput.value = checkbox.checked ? true : false;
+            });
+        }
+        
+
+        var modal = document.getElementById("modal");
+        var openModalBtn = document.getElementById("openModalBtn");
+        var closeBtn = document.getElementsByClassName("close-btn")[0];
+
+        openModalBtn.addEventListener("click", function () {
+            modal.style.display = "block";
+        });
+
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+    });
+
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('imagePreview');
+            output.src = reader.result;
+            output.style.display = 'block';
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+

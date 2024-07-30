@@ -1,0 +1,53 @@
+﻿@using BookingSystemDLS.DataModel.Master.GlobalSetup
+@model IEnumerable<GridGlobalSetupVM>
+
+@{
+    ViewData["Title"] = "GlobalSetup";
+}
+
+
+
+<div>
+ @*    <a class="btn btn-primary" href="@Url.Action("Add", "BookingCode")">
+        Add New
+    </a> *@
+
+    <table>
+        <thead>
+            <tr>
+                <td class="col-1 text-center fw-bold">Action</td>
+                <td class="col-2 text-center fw-bold">Parameter Code</td>
+                <td class="col-2 text-center fw-bold">Parameter Name</td>
+                <td class="col-3 text-center fw-bold">Parameter Desc</td>
+                <td class="col-2 text-center fw-bold">Parameter Value</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">
+                        @* Generate URL with query string *@
+                        <a class="btn btn-success" href="@Url.Action("Edit", "GlobalSetup", new {id=item.Code})">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                        @* <form asp-action="Delete" asp-asp-controller="GlobalSetup" method="post" style="display:inline;">
+                            <input type="hidden" name="code" value="@item.Code" />
+                            
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fa fa-trash-o"></i>
+                            </button>
+                        </form> *@
+                    </td>
+                    <td>@item.Code</td> 
+                    <td>@item.Name</td>
+                    <td>@item.Desc</td>
+                    <td>@item.Value</td>
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+

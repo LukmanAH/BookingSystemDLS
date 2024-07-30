@@ -1,0 +1,49 @@
+﻿@using BookingSystemDLS.DataModel.Master.Location
+@model IEnumerable<GridLocationVM>
+
+@{
+    ViewData["Title"] = "Location";
+}
+
+
+
+<div>
+    <a class="btn btn-primary" href="@Url.Action("Add", "Location")">
+        Add New
+    </a>
+
+    <table>
+        <thead>
+            <tr> 
+                <td class="col-1 text-center fw-bold">Action</td>
+                <td class="col-4 text-center fw-bold">Location</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">
+                        @* Generate URL with query string *@
+                        <a class="btn btn-success" href="@Url.Action("Edit", "Location", new {id=item.Id})">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                        <form asp-action="Delete" asp-asp-controller="LocationWeb" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@item.Id" />
+
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fa fa-trash-o"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+

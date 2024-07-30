@@ -1,0 +1,38 @@
+﻿@using BookingSystemDLS.DataModel.Master.Menu
+@model IEnumerable<NestedMenuVm>
+
+@{
+    ViewData["Title"] = "Menu";
+}
+
+
+
+<div>
+    <ul class="menu">
+         @foreach(var menu in Model)
+        {
+            <li>
+                <a href="#" class="menu-item">@menu.Title</a>
+                <ul class="sub-menu">
+                    @foreach (var subMenu in menu.SubMenu)
+                    {
+                        <li><a href="#">@subMenu.Title</a></li>
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+</div>
+
+<script>
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+            const subMenu = item.nextElementSibling;
+            if (subMenu) {
+                subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+</script>
+
