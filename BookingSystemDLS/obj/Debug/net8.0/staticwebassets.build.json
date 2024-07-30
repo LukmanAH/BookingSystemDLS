@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "pkVFR0XW9vLhrHsLpHhLG5KfmJZ/3ezFMLbtQTKRd/Q=",
+  "Source": "BookingSystemDLS.API",
+  "BasePath": "_content/BookingSystemDLS.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
